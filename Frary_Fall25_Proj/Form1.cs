@@ -6,5 +6,12 @@ namespace Frary_Fall25_Proj
         {
             InitializeComponent();
         }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }
