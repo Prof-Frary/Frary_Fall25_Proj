@@ -49,10 +49,12 @@
             // 
             // txtCustomerName
             // 
-            txtCustomerName.Location = new Point(154, 81);
+            txtCustomerName.Location = new Point(154, 76);
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.Size = new Size(166, 23);
             txtCustomerName.TabIndex = 1;
+            txtCustomerName.Enter += txtCustomerName_Enter;
+            txtCustomerName.Leave += txtCustomerName_Leave;
             // 
             // label2
             // 
@@ -78,6 +80,7 @@
             lstOut.Name = "lstOut";
             lstOut.Size = new Size(286, 94);
             lstOut.TabIndex = 4;
+            lstOut.TabStop = false;
             // 
             // btnCalculation
             // 
@@ -85,9 +88,9 @@
             btnCalculation.Name = "btnCalculation";
             btnCalculation.Size = new Size(75, 43);
             btnCalculation.TabIndex = 5;
-            btnCalculation.Text = "Calculate Total";
+            btnCalculation.Text = "&Calculate Total";
             btnCalculation.UseVisualStyleBackColor = true;
-          //  btnCalculation.Click += btnCalculation_Click;
+            btnCalculation.Click += btnCalculation_Click;
             // 
             // btnReset
             // 
@@ -95,8 +98,9 @@
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(75, 43);
             btnReset.TabIndex = 6;
-            btnReset.Text = "Reset";
+            btnReset.Text = "&Reset";
             btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
             // btnQuit
             // 
@@ -104,7 +108,7 @@
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(75, 43);
             btnQuit.TabIndex = 7;
-            btnQuit.Text = "Quit";
+            btnQuit.Text = "&Quit";
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
@@ -113,7 +117,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(384, 411);
+            ClientSize = new Size(348, 411);
             Controls.Add(btnQuit);
             Controls.Add(btnReset);
             Controls.Add(btnCalculation);
