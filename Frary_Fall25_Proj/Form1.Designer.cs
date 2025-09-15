@@ -36,12 +36,14 @@
             btnCalculation = new Button();
             btnReset = new Button();
             btnQuit = new Button();
+            txtTaxRate = new TextBox();
+            label3 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(31, 84);
+            label1.Location = new Point(31, 52);
             label1.Name = "label1";
             label1.Size = new Size(94, 15);
             label1.TabIndex = 0;
@@ -49,7 +51,7 @@
             // 
             // txtCustomerName
             // 
-            txtCustomerName.Location = new Point(154, 76);
+            txtCustomerName.Location = new Point(154, 44);
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.Size = new Size(166, 23);
             txtCustomerName.TabIndex = 1;
@@ -59,7 +61,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(34, 128);
+            label2.Location = new Point(34, 96);
             label2.Name = "label2";
             label2.Size = new Size(111, 15);
             label2.TabIndex = 2;
@@ -67,7 +69,7 @@
             // 
             // txtNumWidgets
             // 
-            txtNumWidgets.Location = new Point(154, 124);
+            txtNumWidgets.Location = new Point(154, 92);
             txtNumWidgets.Name = "txtNumWidgets";
             txtNumWidgets.Size = new Size(166, 23);
             txtNumWidgets.TabIndex = 3;
@@ -112,12 +114,30 @@
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
+            // txtTaxRate
+            // 
+            txtTaxRate.Location = new Point(154, 126);
+            txtTaxRate.Name = "txtTaxRate";
+            txtTaxRate.Size = new Size(166, 23);
+            txtTaxRate.TabIndex = 9;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(34, 130);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 15);
+            label3.TabIndex = 8;
+            label3.Text = "Tax Rate\r\n";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(348, 411);
+            Controls.Add(txtTaxRate);
+            Controls.Add(label3);
             Controls.Add(btnQuit);
             Controls.Add(btnReset);
             Controls.Add(btnCalculation);
@@ -142,5 +162,7 @@
         private Button btnCalculation;
         private Button btnReset;
         private Button btnQuit;
+        private TextBox txtTaxRate;
+        private Label label3;
     }
 }
