@@ -27,13 +27,16 @@ namespace Frary_Fall25_Proj
             string customerName;
             int numWidgets;
             decimal taxRate;
+            // when setting a decomal literal use M
+            // to indiate it is a decimal and not a double
             decimal widgetPrice = 25.0M;
             decimal subTotal, total, amtTax;
             // Input
             // Read from the textbox into the variable
             customerName = txtCustomerName.Text;
-
+            // convert an string to an int
             numWidgets = int.Parse(txtNumWidgets.Text);
+            //convert a string to a demimal
             taxRate = decimal.Parse(txtTaxRate.Text);
 
             //Processing
@@ -42,7 +45,7 @@ namespace Frary_Fall25_Proj
             amtTax = subTotal * taxRate;
             total = subTotal + amtTax;
 
-            //Output
+            //Output - every variable
             lstOut.Items.Add("Customer Name: " + customerName);
             lstOut.Items.Add("Widget Price: " + widgetPrice.ToString("C"));
             lstOut.Items.Add("Number of Widgets Ordered: " + numWidgets.ToString("N0"));
@@ -53,7 +56,7 @@ namespace Frary_Fall25_Proj
           //  lstOut.Items.Add(5 / 3)
             //lstOut.Items.Add(Math.Sqrt(16));
 
-
+            // this makes the reset button the active control (reset is given the focus)
             btnReset.Focus();
         }
 
