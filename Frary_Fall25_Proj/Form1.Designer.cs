@@ -135,7 +135,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(348, 411);
+            ClientSize = new Size(348, 341);
             Controls.Add(txtTaxRate);
             Controls.Add(label3);
             Controls.Add(btnQuit);

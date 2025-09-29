@@ -39,8 +39,7 @@ namespace Frary_Fall25_Proj
             //convert a string to a demimal
             taxRate = decimal.Parse(txtTaxRate.Text);
 
-            //Processing
-            
+            //Processing            
             subTotal = widgetPrice + numWidgets;
             amtTax = subTotal * taxRate;
             total = subTotal + amtTax;
