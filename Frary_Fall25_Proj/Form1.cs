@@ -18,6 +18,7 @@ namespace Frary_Fall25_Proj
             txtNumWidgets.Clear();
             lstOut.Items.Clear();
             txtCustomerName.Focus();
+            txtTaxRate.Clear(); 
         }
 
         private void btnCalculation_Click(object sender, EventArgs e)
@@ -26,7 +27,8 @@ namespace Frary_Fall25_Proj
             string customerName;
             int numWidgets;
             decimal taxRate;
-
+            decimal widgetPrice = 25.0M;
+            decimal subTotal, total, amtTax;
             // Input
             // Read from the textbox into the variable
             customerName = txtCustomerName.Text;
@@ -35,10 +37,21 @@ namespace Frary_Fall25_Proj
             taxRate = decimal.Parse(txtTaxRate.Text);
 
             //Processing
-
-
+            
+            subTotal = widgetPrice + numWidgets;
+            amtTax = subTotal * taxRate;
+            total = subTotal + amtTax;
 
             //Output
+            lstOut.Items.Add("Customer Name: " + customerName);
+            lstOut.Items.Add("Widget Price: " + widgetPrice.ToString("C"));
+            lstOut.Items.Add("Number of Widgets Ordered: " + numWidgets.ToString("N0"));
+            lstOut.Items.Add("Tax Rate: " + taxRate.ToString("P"));
+            lstOut.Items.Add("Subtotal: " + subTotal.ToString("C"));
+            lstOut.Items.Add("Amount of Tax: " + amtTax.ToString("C"));
+            lstOut.Items.Add("Total: " + total.ToString("C"));
+          //  lstOut.Items.Add(5 / 3)
+            //lstOut.Items.Add(Math.Sqrt(16));
 
 
             btnReset.Focus();

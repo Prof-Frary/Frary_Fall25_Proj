@@ -119,7 +119,7 @@
             txtTaxRate.Location = new Point(154, 126);
             txtTaxRate.Name = "txtTaxRate";
             txtTaxRate.Size = new Size(166, 23);
-            txtTaxRate.TabIndex = 9;
+            txtTaxRate.TabIndex = 5;
             // 
             // label3
             // 
