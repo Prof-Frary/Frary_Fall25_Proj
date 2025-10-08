@@ -37,7 +37,9 @@ namespace Frary_Fall25_Proj
             // convert an string to an int
             numWidgets = int.Parse(txtNumWidgets.Text);
             //convert a string to a demimal
-            taxRate = decimal.Parse(txtTaxRate.Text);
+            // since we want the user to enter as a percent we will need to divide by 100
+            // to get it in the correct format to use mathematically 
+            taxRate = decimal.Parse(txtTaxRate.Text)/100.0M;
 
             //Processing            
             subTotal = widgetPrice + numWidgets;

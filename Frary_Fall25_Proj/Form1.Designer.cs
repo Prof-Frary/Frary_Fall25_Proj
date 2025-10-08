@@ -38,6 +38,7 @@
             btnQuit = new Button();
             txtTaxRate = new TextBox();
             label3 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -71,7 +72,7 @@
             // 
             txtNumWidgets.Location = new Point(154, 92);
             txtNumWidgets.Name = "txtNumWidgets";
-            txtNumWidgets.Size = new Size(166, 23);
+            txtNumWidgets.Size = new Size(141, 23);
             txtNumWidgets.TabIndex = 3;
             // 
             // lstOut
@@ -118,7 +119,7 @@
             // 
             txtTaxRate.Location = new Point(154, 126);
             txtTaxRate.Name = "txtTaxRate";
-            txtTaxRate.Size = new Size(166, 23);
+            txtTaxRate.Size = new Size(141, 23);
             txtTaxRate.TabIndex = 5;
             // 
             // label3
@@ -130,12 +131,23 @@
             label3.TabIndex = 8;
             label3.Text = "Tax Rate\r\n";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(301, 130);
+            label4.Name = "label4";
+            label4.Size = new Size(19, 17);
+            label4.TabIndex = 9;
+            label4.Text = "%";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(348, 341);
+            Controls.Add(label4);
             Controls.Add(txtTaxRate);
             Controls.Add(label3);
             Controls.Add(btnQuit);
@@ -164,5 +176,6 @@
         private Button btnQuit;
         private TextBox txtTaxRate;
         private Label label3;
+        private Label label4;
     }
 }
