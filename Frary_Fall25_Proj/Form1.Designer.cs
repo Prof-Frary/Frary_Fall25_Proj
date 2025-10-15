@@ -39,12 +39,17 @@
             txtTaxRate = new TextBox();
             label3 = new Label();
             label4 = new Label();
+            groupBox1 = new GroupBox();
+            rdoDeluxe = new RadioButton();
+            rdoRegular = new RadioButton();
+            rdoEconomy = new RadioButton();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(31, 52);
+            label1.Location = new Point(30, 86);
             label1.Name = "label1";
             label1.Size = new Size(94, 15);
             label1.TabIndex = 0;
@@ -52,7 +57,7 @@
             // 
             // txtCustomerName
             // 
-            txtCustomerName.Location = new Point(154, 44);
+            txtCustomerName.Location = new Point(153, 78);
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.Size = new Size(166, 23);
             txtCustomerName.TabIndex = 1;
@@ -62,7 +67,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(34, 96);
+            label2.Location = new Point(33, 130);
             label2.Name = "label2";
             label2.Size = new Size(111, 15);
             label2.TabIndex = 2;
@@ -70,7 +75,7 @@
             // 
             // txtNumWidgets
             // 
-            txtNumWidgets.Location = new Point(154, 92);
+            txtNumWidgets.Location = new Point(153, 126);
             txtNumWidgets.Name = "txtNumWidgets";
             txtNumWidgets.Size = new Size(141, 23);
             txtNumWidgets.TabIndex = 3;
@@ -79,7 +84,7 @@
             // 
             lstOut.FormattingEnabled = true;
             lstOut.ItemHeight = 15;
-            lstOut.Location = new Point(34, 170);
+            lstOut.Location = new Point(33, 204);
             lstOut.Name = "lstOut";
             lstOut.Size = new Size(286, 94);
             lstOut.TabIndex = 4;
@@ -87,7 +92,7 @@
             // 
             // btnCalculation
             // 
-            btnCalculation.Location = new Point(15, 283);
+            btnCalculation.Location = new Point(14, 317);
             btnCalculation.Name = "btnCalculation";
             btnCalculation.Size = new Size(75, 43);
             btnCalculation.TabIndex = 5;
@@ -97,7 +102,7 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(133, 283);
+            btnReset.Location = new Point(132, 317);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(75, 43);
             btnReset.TabIndex = 6;
@@ -107,7 +112,7 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(260, 283);
+            btnQuit.Location = new Point(259, 317);
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(75, 43);
             btnQuit.TabIndex = 7;
@@ -117,7 +122,7 @@
             // 
             // txtTaxRate
             // 
-            txtTaxRate.Location = new Point(154, 126);
+            txtTaxRate.Location = new Point(153, 160);
             txtTaxRate.Name = "txtTaxRate";
             txtTaxRate.Size = new Size(141, 23);
             txtTaxRate.TabIndex = 5;
@@ -125,7 +130,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(34, 130);
+            label3.Location = new Point(33, 164);
             label3.Name = "label3";
             label3.Size = new Size(50, 15);
             label3.TabIndex = 8;
@@ -135,18 +140,67 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(301, 130);
+            label4.Location = new Point(300, 164);
             label4.Name = "label4";
             label4.Size = new Size(19, 17);
             label4.TabIndex = 9;
             label4.Text = "%";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(rdoDeluxe);
+            groupBox1.Controls.Add(rdoRegular);
+            groupBox1.Controls.Add(rdoEconomy);
+            groupBox1.Location = new Point(14, 23);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(286, 49);
+            groupBox1.TabIndex = 10;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Widget Model Type";
+            // 
+            // rdoDeluxe
+            // 
+            rdoDeluxe.AutoSize = true;
+            rdoDeluxe.Location = new Point(219, 22);
+            rdoDeluxe.Name = "rdoDeluxe";
+            rdoDeluxe.Size = new Size(61, 19);
+            rdoDeluxe.TabIndex = 2;
+            rdoDeluxe.TabStop = true;
+            rdoDeluxe.Text = "Deluxe";
+            rdoDeluxe.UseVisualStyleBackColor = true;
+            rdoDeluxe.CheckedChanged += rdoDeluxe_CheckedChanged;
+            // 
+            // rdoRegular
+            // 
+            rdoRegular.AutoSize = true;
+            rdoRegular.Location = new Point(116, 22);
+            rdoRegular.Name = "rdoRegular";
+            rdoRegular.Size = new Size(65, 19);
+            rdoRegular.TabIndex = 1;
+            rdoRegular.TabStop = true;
+            rdoRegular.Text = "Regular";
+            rdoRegular.UseVisualStyleBackColor = true;
+            rdoRegular.CheckedChanged += rdoRegular_CheckedChanged;
+            // 
+            // rdoEconomy
+            // 
+            rdoEconomy.AutoSize = true;
+            rdoEconomy.Location = new Point(10, 22);
+            rdoEconomy.Name = "rdoEconomy";
+            rdoEconomy.Size = new Size(75, 19);
+            rdoEconomy.TabIndex = 0;
+            rdoEconomy.TabStop = true;
+            rdoEconomy.Text = "Economy";
+            rdoEconomy.UseVisualStyleBackColor = true;
+            rdoEconomy.CheckedChanged += rdoEconomy_CheckedChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(348, 341);
+            ClientSize = new Size(348, 396);
+            Controls.Add(groupBox1);
             Controls.Add(label4);
             Controls.Add(txtTaxRate);
             Controls.Add(label3);
@@ -160,6 +214,8 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Frary's Widget - Transaction Form";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -177,5 +233,9 @@
         private TextBox txtTaxRate;
         private Label label3;
         private Label label4;
+        private GroupBox groupBox1;
+        private RadioButton rdoDeluxe;
+        private RadioButton rdoRegular;
+        private RadioButton rdoEconomy;
     }
 }

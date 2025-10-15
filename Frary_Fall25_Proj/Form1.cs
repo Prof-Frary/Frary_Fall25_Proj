@@ -6,6 +6,11 @@ namespace Frary_Fall25_Proj
         {
             InitializeComponent();
         }
+        // theses are the class level variables
+        private string widgetType = "";
+        const string ECONOMY_MODEL = "Economy Model";
+        const string REGULAR_MODEL = "Regular Model";
+        const string DELUXE_MODEL = "Deluxe Model";
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
@@ -37,7 +42,7 @@ namespace Frary_Fall25_Proj
             decimal taxRate;
             // when setting a decomal literal use M
             // to indiate it is a decimal and not a double
-            decimal widgetPrice = 25.0M;
+            decimal widgetPrice = 0.0M;
             decimal subTotal, total, amtTax;
             // Input
             // Read from the textbox into the variable
@@ -49,18 +54,34 @@ namespace Frary_Fall25_Proj
             //convert a string to a demimal
             // since we want the user to enter as a percent we will need to divide by 100
             // to get it in the correct format to use mathematically 
-           // taxRate = decimal.Parse(txtTaxRate.Text) / 100.0M;
+            // taxRate = decimal.Parse(txtTaxRate.Text) / 100.0M;
             // Change Parse to TryParse 
             // 1 - Change method name from Parse to TryParse
             // 2 - Move Variable to be second Parameter and add out
             // 3 - add boolean vairable on left side of =
-            widgetsWorked  = int.TryParse(txtNumWidgets.Text, out numWidgets);
+            widgetsWorked = int.TryParse(txtNumWidgets.Text, out numWidgets);
             rateValid = decimal.TryParse(txtTaxRate.Text, out taxRate);
 
             if (widgetsWorked && rateValid)
             {
                 // regular Processing
                 taxRate = taxRate / 100.0M;
+                // get widget price based on model
+                switch (widgetType)
+                {
+                    case REGULAR_MODEL:
+                        widgetPrice = 25.0M;
+                        break;
+                    case ECONOMY_MODEL:
+                        widgetPrice = 15.0M;
+                        break;
+                    case DELUXE_MODEL:
+                        widgetPrice = 35.0M;
+                        break;
+                    default:
+                        lstOut.Items.Add("Error in switch - This should never happen");
+                        break;
+                }// end of switch
 
                 //Processing            
                 subTotal = widgetPrice * numWidgets;
@@ -80,18 +101,19 @@ namespace Frary_Fall25_Proj
 
                 // this makes the reset button the active control (reset is given the focus)
                 btnReset.Focus();
-            } else
+            }
+            else
             {
-               // lstOut.Items.Add("Input error");
+                // lstOut.Items.Add("Input error");
                 if (!widgetsWorked)
                 {
                     lstOut.Items.Add("Number of Widgets is not a whole number");
-                } 
-                if(!rateValid) 
+                }
+                if (!rateValid)
                 {
                     lstOut.Items.Add("Tax Rate is not a number");
                 }
-                
+
             }
         }
 
@@ -105,5 +127,28 @@ namespace Frary_Fall25_Proj
             txtCustomerName.BackColor = SystemColors.Window;
         }
 
+        private void rdoEconomy_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (rdoEconomy.Checked)
+            {
+                widgetType = ECONOMY_MODEL;
+        }
+
+        private void rdoRegular_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoRegular.Checked)
+            {
+                widgetType = REGULAR_MODEL;
+            }
+        }
+
+        private void rdoDeluxe_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoDeluxe.Checked)
+            {
+                widgetType = DELUXE_MODEL;
+            }
+        }
     }
 }
