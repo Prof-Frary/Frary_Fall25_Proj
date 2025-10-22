@@ -7,11 +7,11 @@ namespace Frary_Fall25_Proj
             InitializeComponent();
         }
         // theses are the class level variables
-        private string widgetType = "";
+
         const string ECONOMY_MODEL = "Economy Model";
         const string REGULAR_MODEL = "Regular Model";
         const string DELUXE_MODEL = "Deluxe Model";
-
+        private string widgetType = REGULAR_MODEL;
         private void btnQuit_Click(object sender, EventArgs e)
         {
             DialogResult buttonSelected = MessageBox.Show(
@@ -133,6 +133,7 @@ namespace Frary_Fall25_Proj
             if (rdoEconomy.Checked)
             {
                 widgetType = ECONOMY_MODEL;
+            }
         }
 
         private void rdoRegular_CheckedChanged(object sender, EventArgs e)
@@ -149,6 +150,11 @@ namespace Frary_Fall25_Proj
             {
                 widgetType = DELUXE_MODEL;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            rdoRegular.Checked = true;
         }
     }
 }

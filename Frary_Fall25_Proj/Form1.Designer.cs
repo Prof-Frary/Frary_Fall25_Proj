@@ -165,7 +165,6 @@
             rdoDeluxe.Name = "rdoDeluxe";
             rdoDeluxe.Size = new Size(61, 19);
             rdoDeluxe.TabIndex = 2;
-            rdoDeluxe.TabStop = true;
             rdoDeluxe.Text = "Deluxe";
             rdoDeluxe.UseVisualStyleBackColor = true;
             rdoDeluxe.CheckedChanged += rdoDeluxe_CheckedChanged;
@@ -173,11 +172,10 @@
             // rdoRegular
             // 
             rdoRegular.AutoSize = true;
-            rdoRegular.Location = new Point(116, 22);
+            rdoRegular.Location = new Point(16, 22);
             rdoRegular.Name = "rdoRegular";
             rdoRegular.Size = new Size(65, 19);
             rdoRegular.TabIndex = 1;
-            rdoRegular.TabStop = true;
             rdoRegular.Text = "Regular";
             rdoRegular.UseVisualStyleBackColor = true;
             rdoRegular.CheckedChanged += rdoRegular_CheckedChanged;
@@ -185,11 +183,10 @@
             // rdoEconomy
             // 
             rdoEconomy.AutoSize = true;
-            rdoEconomy.Location = new Point(10, 22);
+            rdoEconomy.Location = new Point(109, 22);
             rdoEconomy.Name = "rdoEconomy";
             rdoEconomy.Size = new Size(75, 19);
             rdoEconomy.TabIndex = 0;
-            rdoEconomy.TabStop = true;
             rdoEconomy.Text = "Economy";
             rdoEconomy.UseVisualStyleBackColor = true;
             rdoEconomy.CheckedChanged += rdoEconomy_CheckedChanged;
@@ -214,6 +211,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Frary's Widget - Transaction Form";
+            Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
