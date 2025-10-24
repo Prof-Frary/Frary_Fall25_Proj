@@ -61,7 +61,7 @@ namespace Frary_Fall25_Proj
             // 3 - add boolean vairable on left side of =
             widgetsWorked = int.TryParse(txtNumWidgets.Text, out numWidgets);
             rateValid = decimal.TryParse(txtTaxRate.Text, out taxRate);
-
+            
             if (widgetsWorked && rateValid)
             {
                 // regular Processing

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Frary_Fall25_Proj/1.0.0": {
+        "runtime": {
+          "Frary_Fall25_Proj.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Frary_Fall25_Proj/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

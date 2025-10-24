@@ -92,7 +92,7 @@
             // 
             // btnCalculation
             // 
-            btnCalculation.Location = new Point(-1, 371);
+            btnCalculation.Location = new Point(20, 386);
             btnCalculation.Name = "btnCalculation";
             btnCalculation.Size = new Size(75, 43);
             btnCalculation.TabIndex = 5;
@@ -102,7 +102,7 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(117, 371);
+            btnReset.Location = new Point(123, 386);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(75, 43);
             btnReset.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(244, 371);
+            btnQuit.Location = new Point(219, 386);
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(75, 43);
             btnQuit.TabIndex = 7;
