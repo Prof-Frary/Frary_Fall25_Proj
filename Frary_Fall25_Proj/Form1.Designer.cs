@@ -84,15 +84,15 @@
             // 
             lstOut.FormattingEnabled = true;
             lstOut.ItemHeight = 15;
-            lstOut.Location = new Point(33, 204);
+            lstOut.Location = new Point(14, 196);
             lstOut.Name = "lstOut";
-            lstOut.Size = new Size(286, 94);
+            lstOut.Size = new Size(305, 169);
             lstOut.TabIndex = 4;
             lstOut.TabStop = false;
             // 
             // btnCalculation
             // 
-            btnCalculation.Location = new Point(14, 317);
+            btnCalculation.Location = new Point(-1, 371);
             btnCalculation.Name = "btnCalculation";
             btnCalculation.Size = new Size(75, 43);
             btnCalculation.TabIndex = 5;
@@ -102,7 +102,7 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(132, 317);
+            btnReset.Location = new Point(117, 371);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(75, 43);
             btnReset.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(259, 317);
+            btnQuit.Location = new Point(244, 371);
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(75, 43);
             btnQuit.TabIndex = 7;
@@ -196,7 +196,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(348, 396);
+            ClientSize = new Size(348, 441);
             Controls.Add(groupBox1);
             Controls.Add(label4);
             Controls.Add(txtTaxRate);
