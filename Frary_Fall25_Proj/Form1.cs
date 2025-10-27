@@ -44,10 +44,17 @@ namespace Frary_Fall25_Proj
             // to indiate it is a decimal and not a double
             decimal widgetPrice = 0.0M;
             decimal subTotal, total, amtTax;
+            bool widgetsWorked, rateValid;
+
+            //ICA 6
+            string widgetTransLog = "widgetTransactionlog.txt";
+            StreamWriter sw;
+
+
             // Input
             // Read from the textbox into the variable
             customerName = txtCustomerName.Text;
-            bool widgetsWorked, rateValid;
+         
             // convert an string to an int
             //  numWidgets = int.Parse(txtNumWidgets.Text);
 
@@ -99,6 +106,31 @@ namespace Frary_Fall25_Proj
                 //  lstOut.Items.Add(5 / 3)
                 //lstOut.Items.Add(Math.Sqrt(16));
 
+
+                //ica 6
+                sw = File.AppendText(widgetTransLog);
+                sw.WriteLine("*********** Tranaction starts at: " + DateTime.Now + " ********"); 
+                sw.WriteLine("Customer Name: " + customerName);
+                sw.WriteLine("Widget Price: " + widgetPrice.ToString("C"));
+                sw.WriteLine("Number of Widgets Ordered: " + numWidgets.ToString("N0"));
+                sw.WriteLine("Tax Rate: " + taxRate.ToString("P"));
+                sw.WriteLine("Subtotal: " + subTotal.ToString("C"));
+                sw.WriteLine("Amount of Tax: " + amtTax.ToString("C"));
+                sw.WriteLine("Total: " + total.ToString("C"));
+
+                sw.Close();
+
+
+
+                /* example of different ways to display date  - uncomment to see the 
+                 * differences
+                lstOut.Items.Add(DateTime.Now.ToString("D"));
+                lstOut.Items.Add(DateTime.Now.ToString("d"));
+                lstOut.Items.Add(DateTime.Now.ToString("T"));
+                lstOut.Items.Add(DateTime.Now.ToString("t"));
+                lstOut.Items.Add(DateTime.Now.ToString("G"));
+
+                */
                 // this makes the reset button the active control (reset is given the focus)
                 btnReset.Focus();
             }

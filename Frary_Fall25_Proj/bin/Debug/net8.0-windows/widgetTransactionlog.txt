@@ -1,0 +1,136 @@
+This is my file
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 10
+Tax Rate: 10.00%
+Subtotal: $250.00
+Amount of Tax: $25.00
+Total: $275.00
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 14
+Tax Rate: 5.00%
+Subtotal: $350.00
+Amount of Tax: $17.50
+Total: $367.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 14
+Tax Rate: 5.00%
+Subtotal: $350.00
+Amount of Tax: $17.50
+Total: $367.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 14
+Tax Rate: 5.00%
+Subtotal: $350.00
+Amount of Tax: $17.50
+Total: $367.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 14
+Tax Rate: 5.00%
+Subtotal: $350.00
+Amount of Tax: $17.50
+Total: $367.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 14
+Tax Rate: 5.00%
+Subtotal: $350.00
+Amount of Tax: $17.50
+Total: $367.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 14
+Tax Rate: 5.00%
+Subtotal: $350.00
+Amount of Tax: $17.50
+Total: $367.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 14
+Tax Rate: 5.00%
+Subtotal: $350.00
+Amount of Tax: $17.50
+Total: $367.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 10
+Tax Rate: 5.00%
+Subtotal: $250.00
+Amount of Tax: $12.50
+Total: $262.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 10
+Tax Rate: 5.00%
+Subtotal: $250.00
+Amount of Tax: $12.50
+Total: $262.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 10
+Tax Rate: 5.00%
+Subtotal: $250.00
+Amount of Tax: $12.50
+Total: $262.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 10
+Tax Rate: 5.00%
+Subtotal: $250.00
+Amount of Tax: $12.50
+Total: $262.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 10
+Tax Rate: 5.00%
+Subtotal: $250.00
+Amount of Tax: $12.50
+Total: $262.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 10
+Tax Rate: 5.00%
+Subtotal: $250.00
+Amount of Tax: $12.50
+Total: $262.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 10
+Tax Rate: 5.00%
+Subtotal: $250.00
+Amount of Tax: $12.50
+Total: $262.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 10
+Tax Rate: 5.00%
+Subtotal: $250.00
+Amount of Tax: $12.50
+Total: $262.50
+Customer Name: fdsfdsagf
+Widget Price: $25.00
+Number of Widgets Ordered: 10
+Tax Rate: 5.00%
+Subtotal: $250.00
+Amount of Tax: $12.50
+Total: $262.50
+*********** Tranaction starts at: 10/27/2025 10:59:48 AM ********
+Customer Name: djsfljsdljfdl
+Widget Price: $25.00
+Number of Widgets Ordered: 100
+Tax Rate: 5.00%
+Subtotal: $2,500.00
+Amount of Tax: $125.00
+Total: $2,625.00
+*********** Tranaction starts at: 10/27/2025 11:02:55 AM ********
+Customer Name: fxgfd
+Widget Price: $25.00
+Number of Widgets Ordered: 34
+Tax Rate: 1.00%
+Subtotal: $850.00
+Amount of Tax: $8.50
+Total: $858.50
