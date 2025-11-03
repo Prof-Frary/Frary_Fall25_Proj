@@ -134,3 +134,67 @@ Tax Rate: 1.00%
 Subtotal: $850.00
 Amount of Tax: $8.50
 Total: $858.50
+*********** Tranaction starts at: 11/3/2025 10:59:38 AM ********
+Customer Name: bzfdgg
+Widget Price: $20.00
+Number of Widgets Ordered: 10
+Tax Rate: 10.00%
+Subtotal: $200.00
+Amount of Tax: $20.00
+Total: $220.00
+*********** Tranaction starts at: 11/3/2025 10:59:51 AM ********
+Customer Name: bzfdgg
+Widget Price: $10.00
+Number of Widgets Ordered: 10
+Tax Rate: 10.00%
+Subtotal: $100.00
+Amount of Tax: $10.00
+Total: $110.00
+*********** Tranaction starts at: 11/3/2025 11:00:03 AM ********
+Customer Name: bzfdgg
+Widget Price: $30.00
+Number of Widgets Ordered: 10
+Tax Rate: 10.00%
+Subtotal: $300.00
+Amount of Tax: $30.00
+Total: $330.00
+*********** Tranaction starts at: 11/3/2025 11:01:43 AM ********
+Customer Name: xcbvzv
+Widget Price: $200.00
+Number of Widgets Ordered: 10
+Tax Rate: 10.00%
+Subtotal: $2,000.00
+Amount of Tax: $200.00
+Total: $2,200.00
+*********** Tranaction starts at: 11/3/2025 11:01:47 AM ********
+Customer Name: xcbvzv
+Widget Price: $100.00
+Number of Widgets Ordered: 10
+Tax Rate: 10.00%
+Subtotal: $1,000.00
+Amount of Tax: $100.00
+Total: $1,100.00
+*********** Tranaction starts at: 11/3/2025 11:01:52 AM ********
+Customer Name: xcbvzv
+Widget Price: $300.00
+Number of Widgets Ordered: 10
+Tax Rate: 10.00%
+Subtotal: $3,000.00
+Amount of Tax: $300.00
+Total: $3,300.00
+*********** Tranaction starts at: 11/3/2025 11:20:28 AM ********
+Customer Name: safgr
+Widget Price: $0.00
+Number of Widgets Ordered: 10
+Tax Rate: 10.00%
+Subtotal: $0.00
+Amount of Tax: $0.00
+Total: $0.00
+*********** Tranaction starts at: 11/3/2025 11:36:03 AM ********
+Customer Name: af
+Widget Price: $0.00
+Number of Widgets Ordered: 10
+Tax Rate: 10.00%
+Subtotal: $0.00
+Amount of Tax: $0.00
+Total: $0.00

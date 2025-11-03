@@ -12,6 +12,10 @@ namespace Frary_Fall25_Proj
         const string REGULAR_MODEL = "Regular Model";
         const string DELUXE_MODEL = "Deluxe Model";
         private string widgetType = REGULAR_MODEL;
+        string widgetTransLog = "widgetTransactionlog.txt";
+        string widgetConfig = "widgetConfig1.txt";
+        decimal regularPrice, economyPrice, deluxePrice;
+
         private void btnQuit_Click(object sender, EventArgs e)
         {
             DialogResult buttonSelected = MessageBox.Show(
@@ -47,7 +51,7 @@ namespace Frary_Fall25_Proj
             bool widgetsWorked, rateValid;
 
             //ICA 6
-            string widgetTransLog = "widgetTransactionlog.txt";
+         
             StreamWriter sw;
 
 
@@ -77,13 +81,13 @@ namespace Frary_Fall25_Proj
                 switch (widgetType)
                 {
                     case REGULAR_MODEL:
-                        widgetPrice = 25.0M;
+                        widgetPrice = regularPrice;
                         break;
                     case ECONOMY_MODEL:
-                        widgetPrice = 15.0M;
+                        widgetPrice = economyPrice;
                         break;
                     case DELUXE_MODEL:
-                        widgetPrice = 35.0M;
+                        widgetPrice = deluxePrice;
                         break;
                     default:
                         lstOut.Items.Add("Error in switch - This should never happen");
@@ -187,6 +191,19 @@ namespace Frary_Fall25_Proj
         private void Form1_Load(object sender, EventArgs e)
         {
             rdoRegular.Checked = true;
+            StreamReader sr;
+            try
+            {
+                sr = File.OpenText(widgetConfig);
+                regularPrice = decimal.Parse(sr.ReadLine());
+                economyPrice = decimal.Parse(sr.ReadLine());
+                deluxePrice = decimal.Parse(sr.ReadLine());
+
+                sr.Close();
+            } catch (FileNotFoundException ex)
+            {
+                lstOut.Items.Add(ex.Message);
+            }
         }
     }
 }
