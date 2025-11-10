@@ -36,6 +36,7 @@ namespace Frary_Fall25_Proj
             lstOut.Items.Clear();
             txtCustomerName.Focus();
             txtTaxRate.Clear();
+            rdoRegular.Checked = true;
         }
 
         private void btnCalculation_Click(object sender, EventArgs e)
@@ -190,20 +191,31 @@ namespace Frary_Fall25_Proj
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            bool fileValid = false;
             rdoRegular.Checked = true;
-            StreamReader sr;
-            try
-            {
-                sr = File.OpenText(widgetConfig);
-                regularPrice = decimal.Parse(sr.ReadLine());
-                economyPrice = decimal.Parse(sr.ReadLine());
-                deluxePrice = decimal.Parse(sr.ReadLine());
 
-                sr.Close();
-            } catch (FileNotFoundException ex)
-            {
-                lstOut.Items.Add(ex.Message);
+            StreamReader sr;
+            do {
+                try
+                {
+                    sr = File.OpenText(widgetConfig);
+                    fileValid = true;   
+                    regularPrice = decimal.Parse(sr.ReadLine());
+                    economyPrice = decimal.Parse(sr.ReadLine());
+                    deluxePrice = decimal.Parse(sr.ReadLine());
+
+                    sr.Close();
+                } catch (FileNotFoundException ex)
+                {
+                    MessageBox.Show("Configuration file not found. Please select the Correct File", "File not found");
+
+                    // lstOut.Items.Add(ex.Message);
+                    ofd.Filter = "Text Files|*.txt|All Files|*.*";
+                    ofd.ShowDialog();
+                    widgetConfig = ofd.FileName;
+                }
+            } while (!fileValid);
+
             }
-        }
     }
 }
