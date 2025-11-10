@@ -1,5 +1,11 @@
 namespace Frary_Fall25_Proj
 {
+
+    //ICA 7 
+    // add variables for each item that will be saved in your file
+    // add open file dialog from tool box to designer
+    // add file to bin/debug/net8...
+    // add form1 code
     public partial class Form1 : Form
     {
         public Form1()
@@ -12,7 +18,9 @@ namespace Frary_Fall25_Proj
         const string REGULAR_MODEL = "Regular Model";
         const string DELUXE_MODEL = "Deluxe Model";
         private string widgetType = REGULAR_MODEL;
+        // ica 6
         string widgetTransLog = "widgetTransactionlog.txt";
+        // ica 7
         string widgetConfig = "widgetConfig1.txt";
         decimal regularPrice, economyPrice, deluxePrice;
 
@@ -81,6 +89,7 @@ namespace Frary_Fall25_Proj
                 // get widget price based on model
                 switch (widgetType)
                 {
+                    // changed fro ICA 7
                     case REGULAR_MODEL:
                         widgetPrice = regularPrice;
                         break;
@@ -191,8 +200,9 @@ namespace Frary_Fall25_Proj
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            bool fileValid = false;
-            rdoRegular.Checked = true;
+            ///ICA 7
+            bool fileValid = false; 
+            rdoRegular.Checked = true;  // ica 6
 
             StreamReader sr;
             do {
