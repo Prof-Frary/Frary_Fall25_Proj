@@ -198,3 +198,19 @@ Tax Rate: 10.00%
 Subtotal: $0.00
 Amount of Tax: $0.00
 Total: $0.00
+*********** Transaction starts at: 11/17/2025 11:17:50 AM ********
+Customer Name: okgf;kfdljgdfal
+Widget Price: $200.00
+Number of Widgets Ordered: 34
+Tax Rate: 10.00%
+Subtotal: $6,800.00
+Amount of Tax: $680.00
+Total: $7,480.00
+*********** Transaction starts at: 11/17/2025 11:18:16 AM ********
+Customer Name: okgf;kfdljgdfal
+Widget Price: $100.00
+Number of Widgets Ordered: 34
+Tax Rate: 10.00%
+Subtotal: $3,400.00
+Amount of Tax: $340.00
+Total: $3,740.00

@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace Frary_Fall25_Proj
 {
 
@@ -12,6 +14,44 @@ namespace Frary_Fall25_Proj
         {
             InitializeComponent();
         }
+
+        //ICA 8 - Properties
+        // we will create properties for each variable we saved in the file 
+        // we will not use automatic properties here
+
+        public decimal RegularPrice
+        {
+            get { return regularPrice; }
+            set { 
+                if (value >= 0)
+                {
+                    regularPrice = value;
+                }
+            }
+        }
+        public decimal EconomyPrice
+        {
+            get { return economyPrice; }
+            set {
+                if (value >= 0)
+                {
+                    economyPrice = value;
+                }
+            }
+        }
+        public decimal DeluxePrice
+        {
+            get { return deluxePrice; }
+            set
+            {
+                if (value >= 0)
+                {
+                    deluxePrice = value;
+                }
+            }
+        }
+
+
         // theses are the class level variables
 
         const string ECONOMY_MODEL = "Economy Model";
@@ -21,7 +61,7 @@ namespace Frary_Fall25_Proj
         // ica 6
         string widgetTransLog = "widgetTransactionlog.txt";
         // ica 7
-        string widgetConfig = "widgetConfig1.txt";
+        string widgetConfig = "widgetConfig1.txt";        
         decimal regularPrice, economyPrice, deluxePrice;
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -91,13 +131,13 @@ namespace Frary_Fall25_Proj
                 {
                     // changed fro ICA 7
                     case REGULAR_MODEL:
-                        widgetPrice = regularPrice;
+                        widgetPrice = RegularPrice;
                         break;
                     case ECONOMY_MODEL:
-                        widgetPrice = economyPrice;
+                        widgetPrice = EconomyPrice;
                         break;
                     case DELUXE_MODEL:
-                        widgetPrice = deluxePrice;
+                        widgetPrice = DeluxePrice;
                         break;
                     default:
                         lstOut.Items.Add("Error in switch - This should never happen");
@@ -108,7 +148,7 @@ namespace Frary_Fall25_Proj
                 subTotal = widgetPrice * numWidgets;
                 amtTax = subTotal * taxRate;
                 total = subTotal + amtTax;
-
+                /*
                 //Output - every variable
                 lstOut.Items.Add("Customer Name: " + customerName);
                 lstOut.Items.Add("Widget Price: " + widgetPrice.ToString("C"));
@@ -134,7 +174,17 @@ namespace Frary_Fall25_Proj
 
                 sw.Close();
 
+                */
 
+                outputMsg("*********** Transaction starts at: " + DateTime.Now + " ********",LOGFILE);
+
+                outputMsg("Customer Name: " + customerName,BOTH);
+                outputMsg("Widget Price: " + widgetPrice.ToString("C"), BOTH);
+                outputMsg("Number of Widgets Ordered: " + numWidgets.ToString("N0"), BOTH);
+                outputMsg("Tax Rate: " + taxRate.ToString("P"), BOTH);
+                outputMsg("Subtotal: " + subTotal.ToString("C"), BOTH);
+                outputMsg("Amount of Tax: " + amtTax.ToString("C"), BOTH);
+                outputMsg("Total: " + total.ToString("C"), BOTH);
 
                 /* example of different ways to display date  - uncomment to see the 
                  * differences
@@ -161,6 +211,25 @@ namespace Frary_Fall25_Proj
                 }
 
             }
+        }
+        const int LISTBOX = 1;
+        const int LOGFILE = 2;
+        const int BOTH = 3;
+        private void outputMsg(string msg,int outputType)
+        {
+            StreamWriter sw;
+            if (outputType == LISTBOX || outputType == BOTH)
+            {
+                lstOut.Items.Add(msg);
+            }
+            if (outputType == LOGFILE || outputType == BOTH)
+            {
+                sw = File.AppendText(widgetTransLog);
+                sw.WriteLine(msg);       
+
+                sw.Close();
+            }
+
         }
 
         private void txtCustomerName_Enter(object sender, EventArgs e)
@@ -217,7 +286,7 @@ namespace Frary_Fall25_Proj
                     sr.Close();
                 } catch (FileNotFoundException ex)
                 {
-                    MessageBox.Show("Configuration file not found. Please select the Correct File", "File not found");
+                    MessageBox.Show("Configuration file not found. Please select the correct file", "File not found");
 
                     // lstOut.Items.Add(ex.Message);
                     ofd.Filter = "Text Files|*.txt|All Files|*.*";
