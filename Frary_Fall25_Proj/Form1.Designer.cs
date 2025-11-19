@@ -44,13 +44,16 @@
             rdoRegular = new RadioButton();
             rdoEconomy = new RadioButton();
             ofd = new OpenFileDialog();
+            menuStrip1 = new MenuStrip();
+            mnuSetting = new ToolStripMenuItem();
             groupBox1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(30, 86);
+            label1.Location = new Point(30, 110);
             label1.Name = "label1";
             label1.Size = new Size(94, 15);
             label1.TabIndex = 0;
@@ -58,7 +61,7 @@
             // 
             // txtCustomerName
             // 
-            txtCustomerName.Location = new Point(153, 78);
+            txtCustomerName.Location = new Point(153, 102);
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.Size = new Size(166, 23);
             txtCustomerName.TabIndex = 1;
@@ -68,7 +71,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(33, 130);
+            label2.Location = new Point(33, 135);
             label2.Name = "label2";
             label2.Size = new Size(111, 15);
             label2.TabIndex = 2;
@@ -76,7 +79,7 @@
             // 
             // txtNumWidgets
             // 
-            txtNumWidgets.Location = new Point(153, 126);
+            txtNumWidgets.Location = new Point(153, 131);
             txtNumWidgets.Name = "txtNumWidgets";
             txtNumWidgets.Size = new Size(141, 23);
             txtNumWidgets.TabIndex = 3;
@@ -152,9 +155,9 @@
             groupBox1.Controls.Add(rdoDeluxe);
             groupBox1.Controls.Add(rdoRegular);
             groupBox1.Controls.Add(rdoEconomy);
-            groupBox1.Location = new Point(14, 23);
+            groupBox1.Location = new Point(20, 41);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(286, 49);
+            groupBox1.Size = new Size(286, 45);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Widget Model Type";
@@ -196,6 +199,22 @@
             // 
             ofd.FileName = "openFileDialog1";
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { mnuSetting });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(348, 24);
+            menuStrip1.TabIndex = 11;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // mnuSetting
+            // 
+            mnuSetting.Name = "mnuSetting";
+            mnuSetting.Size = new Size(61, 20);
+            mnuSetting.Text = "&Settings";
+            mnuSetting.Click += mnuSetting_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -214,11 +233,15 @@
             Controls.Add(label2);
             Controls.Add(txtCustomerName);
             Controls.Add(label1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Frary's Widget - Transaction Form";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -241,5 +264,7 @@
         private RadioButton rdoRegular;
         private RadioButton rdoEconomy;
         private OpenFileDialog ofd;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem mnuSetting;
     }
 }

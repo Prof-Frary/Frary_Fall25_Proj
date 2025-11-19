@@ -22,7 +22,8 @@ namespace Frary_Fall25_Proj
         public decimal RegularPrice
         {
             get { return regularPrice; }
-            set { 
+            set
+            {
                 if (value >= 0)
                 {
                     regularPrice = value;
@@ -32,7 +33,8 @@ namespace Frary_Fall25_Proj
         public decimal EconomyPrice
         {
             get { return economyPrice; }
-            set {
+            set
+            {
                 if (value >= 0)
                 {
                     economyPrice = value;
@@ -53,7 +55,7 @@ namespace Frary_Fall25_Proj
 
 
         // theses are the class level variables
-
+        Form2 sf;
         const string ECONOMY_MODEL = "Economy Model";
         const string REGULAR_MODEL = "Regular Model";
         const string DELUXE_MODEL = "Deluxe Model";
@@ -61,7 +63,7 @@ namespace Frary_Fall25_Proj
         // ica 6
         string widgetTransLog = "widgetTransactionlog.txt";
         // ica 7
-        string widgetConfig = "widgetConfig1.txt";        
+        string widgetConfig = "widgetConfig.txt";
         decimal regularPrice, economyPrice, deluxePrice;
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -100,14 +102,14 @@ namespace Frary_Fall25_Proj
             bool widgetsWorked, rateValid;
 
             //ICA 6
-         
+
             StreamWriter sw;
 
 
             // Input
             // Read from the textbox into the variable
             customerName = txtCustomerName.Text;
-         
+
             // convert an string to an int
             //  numWidgets = int.Parse(txtNumWidgets.Text);
 
@@ -121,7 +123,7 @@ namespace Frary_Fall25_Proj
             // 3 - add boolean vairable on left side of =
             widgetsWorked = int.TryParse(txtNumWidgets.Text, out numWidgets);
             rateValid = decimal.TryParse(txtTaxRate.Text, out taxRate);
-            
+
             if (widgetsWorked && rateValid)
             {
                 // regular Processing
@@ -176,9 +178,9 @@ namespace Frary_Fall25_Proj
 
                 */
 
-                outputMsg("*********** Transaction starts at: " + DateTime.Now + " ********",LOGFILE);
+                outputMsg("*********** Transaction starts at: " + DateTime.Now + " ********", LOGFILE);
 
-                outputMsg("Customer Name: " + customerName,BOTH);
+                outputMsg("Customer Name: " + customerName, BOTH);
                 outputMsg("Widget Price: " + widgetPrice.ToString("C"), BOTH);
                 outputMsg("Number of Widgets Ordered: " + numWidgets.ToString("N0"), BOTH);
                 outputMsg("Tax Rate: " + taxRate.ToString("P"), BOTH);
@@ -215,7 +217,7 @@ namespace Frary_Fall25_Proj
         const int LISTBOX = 1;
         const int LOGFILE = 2;
         const int BOTH = 3;
-        private void outputMsg(string msg,int outputType)
+        private void outputMsg(string msg, int outputType)
         {
             StreamWriter sw;
             if (outputType == LISTBOX || outputType == BOTH)
@@ -225,7 +227,7 @@ namespace Frary_Fall25_Proj
             if (outputType == LOGFILE || outputType == BOTH)
             {
                 sw = File.AppendText(widgetTransLog);
-                sw.WriteLine(msg);       
+                sw.WriteLine(msg);
 
                 sw.Close();
             }
@@ -269,22 +271,26 @@ namespace Frary_Fall25_Proj
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            sf = new Form2(this);
+
             ///ICA 7
-            bool fileValid = false; 
+            bool fileValid = false;
             rdoRegular.Checked = true;  // ica 6
 
             StreamReader sr;
-            do {
+            do
+            {
                 try
                 {
                     sr = File.OpenText(widgetConfig);
-                    fileValid = true;   
+                    fileValid = true;
                     regularPrice = decimal.Parse(sr.ReadLine());
                     economyPrice = decimal.Parse(sr.ReadLine());
                     deluxePrice = decimal.Parse(sr.ReadLine());
 
                     sr.Close();
-                } catch (FileNotFoundException ex)
+                }
+                catch (FileNotFoundException ex)
                 {
                     MessageBox.Show("Configuration file not found. Please select the correct file", "File not found");
 
@@ -295,6 +301,12 @@ namespace Frary_Fall25_Proj
                 }
             } while (!fileValid);
 
-            }
+        }
+
+        private void mnuSetting_Click(object sender, EventArgs e)
+        {
+            sf.ShowDialog();
+
+        }
     }
 }
